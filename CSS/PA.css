@@ -615,6 +615,10 @@ transition:all .5s;
   color:var(--textColor);
 }
 
+.ATV3_PA_scenar a:hover {
+  color:var(--textColor);
+}
+
 .ATV3_PA_scenar span {
   text-transform:uppercase;
   font-weight:bold;
@@ -770,6 +774,7 @@ transition:all .5s;
 
 .ATV3_PAnav a:hover {
   background:var(--contrastLight);
+  color:var(--textColorAccent);
 }
 
 /*MODAL STAFF*/
