@@ -191,13 +191,18 @@ a.forumtitle {
   font-size:var(--little-size);
 }
 
+#c2 .forum_lastpost span {
+  display: block;
+  height:45px;
+}
+
 a.lastpost_link {
   display: block; 
   width: 100%; 
   background: var(--secondaire);
   color: var(--textColorAccent);
   padding: 2px 5px 2px 5px;
-  margin: 0 0 3px 0;
+  margin:0;
   box-sizing: border-box; 
   border-radius:2px;
 }
@@ -210,15 +215,21 @@ a.lastpost_link {
 }
 
 .lastpost-author {
-  font-size: 0; 
-  
+  font-size: 0;
+  display: block;  /* On le force en bloc */
+  line-height: 1;  /* Force une hauteur de ligne minimale pour éviter les espaces vides */
+  margin-top: 2px; /* Contrôlez l'espace EXACT avec le lien du dessus ici (ex: 2px ou 0) */
+}
+
 .lastpost-author strong, 
 .lastpost-author a {
-  font-size: var(--little-size);
+  font-size: var(--little-size); 
+  display: inline-block;
+  line-height: normal;
 }
 
 .lastpost-author br {
-  display: none;
+  display: none; 
 }
 
 /* liens des sous forums */
