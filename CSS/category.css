@@ -209,6 +209,18 @@ a.lastpost_link {
   justify-content: space-between;
 }
 
+.lastpost-author {
+  font-size: 0; 
+  
+.lastpost-author strong, 
+.lastpost-author a {
+  font-size: var(--little-size);
+}
+
+.lastpost-author br {
+  display: none;
+}
+
 /* liens des sous forums */
 #subforum {
   display: flex;
