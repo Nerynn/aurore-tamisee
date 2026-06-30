@@ -128,6 +128,10 @@ a.forumtitle {
   text-transform:uppercase;
 }
 
+a.forumtitle:hover {
+  color:var(--primaire);
+}
+
 .forum_content {
   display: flex;
   gap: 10px;
@@ -195,7 +199,6 @@ a.forumtitle {
 }
 
 #c2 .forum_lastpost span {
-  display: block;
   height:45px;
 }
 
@@ -210,6 +213,10 @@ a.lastpost_link {
   margin:0 0 5px 0;
   box-sizing: border-box; 
   border-radius:2px;
+}
+
+a.lastpost_link:hover {
+  color: var(--textColorAccent);
 }
 
 .forum_details {
@@ -227,12 +234,16 @@ a.lastpost_link {
   margin-top: 2px; 
 }
 
+.lastpost-author span {
+  margin:0 5px 0 5px;
+}
+
 .lastpost-author strong, 
 .lastpost-author a {
   font-size: var(--little-size); 
   display: inline-block;
   line-height: normal;
-  margin:0 5px 0 0;
+  margin:0 0 0 0;
 }
 
 .lastpost-author br {
@@ -240,7 +251,7 @@ a.lastpost_link {
 }
 
 .last-post-icon {
-  margin:-2px 0 0 -10px!important;
+  margin:-2px 0 0 0!important;
   display: inline-block;
   vertical-align:top;
 }
@@ -264,7 +275,7 @@ a.lastpost_link {
 
 #subforum a {
   display: inline-block;
-  padding:5px 10px 3px 10px;
+  padding:5px 8px 3px 8px;
   font-size: var(--little-size);
   line-height: var(--little-size);
   font-family: var(--font);
