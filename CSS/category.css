@@ -382,7 +382,7 @@ a.forumtitle:hover {
 #c2 .forum:nth-child(4) #subforum a {
   background: var(--contrastLight);
   color:var(--textColorAccent);
-  padding:5px 6px 4px 6px;
+  padding:5px 5px 4px 6px;
 }
 
 #c2 .forum:nth-child(4) #subforum a:hover {
