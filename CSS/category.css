@@ -2,10 +2,10 @@
 /*** CATEGORIES -------------------- ***/
 
 .category {
-  background:var(--neutralDark);
+  background:var(--neutralDarker);
   border-radius: 10px;
   padding: 10px;
-  margin-bottom: 25px;
+  margin: 25px 0 25px 0;
   position:relative;
   z-index:45;
 }
@@ -14,8 +14,8 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: var(--img-principale);
-  filter: blur(0px);
+  background: url('https://i.ibb.co/qXZ6x40/colo2.webp') center /100%;
+  filter: grayscale(1);
   transform: scale(1);
   z-index: -1;
   opacity:0.2;
@@ -35,13 +35,13 @@
   grid-template-columns: 1fr auto; 
   gap: 20px;
   background:var(--neutralDark);
-  padding:20px 20px 20px 20px;
-  margin: 15px 0 20px 0;
+  padding:15px 15px 15px 15px;
 }
 
 #c2 .forums {
   display:grid;
   grid-template-columns:repeat(6, 1fr);
+  gap:20px;
 }
 
 #c2 .forum:nth-child(-n+2) {
@@ -61,7 +61,7 @@
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0 20px;
-  color:var(--textColor);
+  color:#ededed;
   font-family:var(--titlefont);
   font-size:32px;
   font-weight:300;
@@ -72,7 +72,7 @@
 }
 
 #c2 .cate_title h2 {
-  margin:10px 0 0 0;
+  margin:10px 0 10px 0;
 }
 
 /* GUIDEBOOK */
@@ -82,17 +82,68 @@
 }
 
 #c2 .guidebook {
-  display:block;
-  background:var(--neutral);
-  border-radius: 5px;
-  width:400px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--neutral), rgba(0, 0, 0, 0.3)), var(--img-guidebook), linear-gradient(to bottom, var(--tertiaire), rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+  width:450px;
+  position:relative;
+}
+
+#c2 .guidebook a:hover {
+  color:var(--textColor);
+}
+
+#c2 .guidebook h2 {
+  font-family:var(--titlefont);
+  text-transform:uppercase;
+  font-size:70px;
+  font-weight:300;
+  text-shadow: 0px 0px 20px var(--neutral);
+}
+
+#c2 .guidebook span {
+  padding:0 20px 0 20px;
+}
+
+#c2 .guidebook h2 span {
+  padding:0;
+  color:var(--tertiaire);
+}
+
+#c2 #guidebook_links {
+  width:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap:10px;
+  position:absolute;
+  left:15px;
+  bottom:15px;
+}
+
+#c2 #guidebook_links a {
+  background:var(--tertiaire);
+  padding:5px;
+  border-radius:5px;
+  color:var(--textColorAccent);
+}
+
+#c2 #guidebook_links a:hover {
+  background:var(--accentClr);
 }
 
 /* conteneur d'un forum*/
 .forum {
   margin-bottom: 10px;
   background: var(--neutral);
-  padding: 10px;
   border-radius: 5px;
 }
 
@@ -103,7 +154,6 @@
 #c2 .forum {
   margin:0;
   background:transparent;
-  padding: 10px;
   border-radius: 5px;
 }
 
@@ -113,13 +163,38 @@
   background:var(--neutral);
   padding:5px;
   border-radius:10px;
-  color:var(--secondaire);
+  color:var(--accentClr);
   font-size:var(--little-size);
   text-transform:uppercase;
 }
 
+#c2 .forum:nth-child(3) .forum-entete, 
+#c2 .forum:nth-child(5) .forum-entete {
+  background: var(--accentClr);
+  color:var(--textColorAccent);
+}
+
+#c2 .forum:nth-child(4) .forum-entete {
+  background: var(--contrastLight);
+  color:var(--textColorAccent);
+}
+
 #c2 .forum.cat_new .forum-entete {
-  background: linear-gradient(90deg, var(--neutral) 35%, var(--primaire) 100%);
+  background: linear-gradient(90deg, var(--neutral) 35%, var(--tertiaire) 100%);
+}
+
+#c2 .forum.cat_new a.lastpost_link {
+  background:var(--tertiaire);
+  color:var(--textColorAccent);
+}
+
+
+#c2 .forum:nth-child(3).cat_new .forum-entete, #c2 .forum:nth-child(5).cat_new .forum-entete{
+  background: linear-gradient(90deg, var(--accentClr) 35%, var(--tertiaire) 100%);
+}
+
+#c2 .forum:nth-child(4).cat_new .forum-entete {
+  background: linear-gradient(90deg, var(--contrastLight) 35%, var(--tertiaire) 100%);
 }
 
 a.forumtitle {
@@ -129,7 +204,21 @@ a.forumtitle {
 }
 
 a.forumtitle:hover {
-  color:var(--primaire);
+  color:var(--tertiaire);
+}
+
+#c2 .forum:nth-child(3) a.forumtitle, 
+#c2 .forum:nth-child(5) a.forumtitle {
+  color:var(--textColorAccent);
+}
+
+#c2 .forum:nth-child(4) a.forumtitle {
+  color:var(--textColorAccent);
+}
+
+#c2 .forum:nth-child(3) a.forumtitle:hover, #c2 .forum:nth-child(4) a.forumtitle:hover,
+#c2 .forum:nth-child(5) a.forumtitle:hover {
+  color:var(--accent);
 }
 
 .forum_content {
@@ -202,21 +291,21 @@ a.forumtitle:hover {
   height:45px;
 }
 
-a.lastpost_link {
+#c2 a.lastpost_link {
   display: block; 
   width: 100%; 
   height:21px;
   overflow:hidden;
-  background: var(--secondaire);
-  color: var(--textColorAccent);
+  background: var(--neutral);
+  color: var(--textColor);
   padding: 2px 5px 3px 5px;
   margin:0 0 5px 0;
   box-sizing: border-box; 
   border-radius:2px;
 }
 
-a.lastpost_link:hover {
-  color: var(--textColorAccent);
+#c2 a.lastpost_link:hover {
+  color: var(--textColor);
 }
 
 .forum_details {
@@ -275,7 +364,7 @@ a.lastpost_link:hover {
 
 #subforum a {
   display: inline-block;
-  padding:5px 8px 3px 8px;
+  padding:5px 8px 4px 8px;
   font-size: var(--little-size);
   line-height: var(--little-size);
   font-family: var(--font);
@@ -287,7 +376,18 @@ a.lastpost_link:hover {
 
 #subforum a:hover {
   color: var(--textColorAccent);
-  background: var(--primaire);
+  background: var(--accentClr);
+}
+
+#c2 .forum:nth-child(4) #subforum a {
+  background: var(--contrastLight);
+  color:var(--textColorAccent);
+  padding:5px 6px 4px 6px;
+}
+
+#c2 .forum:nth-child(4) #subforum a:hover {
+  background: var(--tertiaire);
+  color:var(--textColorAccent);
 }
 
 .forum_stats {
