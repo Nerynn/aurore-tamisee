@@ -745,3 +745,80 @@ a.forumtitle:hover {
   float: right;
   font-size: var(--little-size);
 }
+
+/*symbole forum*/
+
+.forum_circle {
+  display:none;
+}
+
+#c1 .forum:nth-child(1) .forum_circle, #c1 .forum:nth-child(6) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3979449/couronne.png') no-repeat center 5px /40px var(--diurnes); 
+  cursor: pointer;
+}
+
+#c1 .forum:nth-child(2) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3977334/loup-dark.png') no-repeat center 5px /50px var(--griffes); 
+  cursor: pointer;
+}
+
+#c1 .forum:nth-child(4) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3977333/vampires-dark.png') no-repeat center 5px /50px var(--crocs); 
+  cursor: pointer;
+}
+
+#c1 .forum_info {
+  display:none;
+  position:absolute;
+  background:var(--neutral);
+  color:var(--textColor);
+  top:40px;
+  left:80px;
+  padding:5px 5px 5px 15px;
+  clip-path: polygon(100% 0, 100% 100%, 5% 100%, 5% 24%, 0 0);
+}
+
+#c1 .forum_circle:hover + .forum_info {
+  display:block;
+} 
+
+#c1 .forum:nth-child(1) .forum_info::before, #c1 .forum:nth-child(6) .forum_info::before {
+  content: "propriété de la couronne";
+}
+
+#c1 .forum:nth-child(2) .forum_info {
+   padding:5px 5px 5px 18px;
+}
+
+#c1 .forum:nth-child(2) .forum_info::before {
+  content: "territoire de la meute Marylebone";
+}
+
+#c1 .forum:nth-child(4) .forum_info::before {
+  content: "territoire de la ruche Lexington";
+}
+
