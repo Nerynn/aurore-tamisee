@@ -205,7 +205,8 @@
 /* TERRITOIRE*/
 
 #c1 .forum:is(:nth-child(1), :nth-child(6))::before,
-#f26 .forum:nth-child(-n+5)::before {
+#f26 .forum:nth-child(-n+3)::before, #f26 .forum:nth-child(5)::before,
+#f31 .forum:nth-child(-n+4)::before{
   background: linear-gradient(180deg, var(--diurnesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
@@ -219,6 +220,7 @@
   background: linear-gradient(180deg, var(--crocsalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
+#f26 .forum:nth-child(4)::before,
 #f29 .forum:nth-child(5)::before {
   background: linear-gradient(180deg, var(--secret2alt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
