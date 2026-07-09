@@ -205,12 +205,12 @@
 /* TERRITOIRE*/
 
 #c1 .forum:is(:nth-child(1), :nth-child(6))::before,
-#f26 .forum:nth-child(-n+3)::before, #f26 .forum:nth-child(5)::before,
-#f31 .forum:nth-child(-n+4)::before{
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5))::before,
+#f31 .forum:nth-child(-n+4)::before {
   background: linear-gradient(180deg, var(--diurnesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-#c1 .forum:is(:nth-child(2),
+#c1 .forum:nth-child(2)::before,
 #f27 .forum:nth-child(-n+4)::before {
   background: linear-gradient(180deg, var(--griffesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
