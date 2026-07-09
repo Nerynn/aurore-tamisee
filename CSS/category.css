@@ -204,17 +204,23 @@
 
 /* TERRITOIRE*/
 
-#c1 .forum:nth-child(1)::before, 
-#c1 .forum:nth-child(6)::before {
+#c1 .forum:is(:nth-child(1), :nth-child(6))::before,
+#f26 .forum:nth-child(-n+5)::before {
   background: linear-gradient(180deg, var(--diurnesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-#c1 .forum:nth-child(2)::before {
+#c1 .forum:is(:nth-child(2),
+#f27 .forum:nth-child(-n+4)::before {
   background: linear-gradient(180deg, var(--griffesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-#c1 .forum:nth-child(4)::before {
+#c1 .forum:nth-child(4)::before,
+#f29 .forum:nth-child(-n+4)::before {
   background: linear-gradient(180deg, var(--crocsalt) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+#f29 .forum:nth-child(5)::before {
+  background: linear-gradient(180deg, var(--secret2alt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 /* titre d'un forum */
