@@ -44,7 +44,7 @@
   gap:20px;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forums {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forums {
   display:flex;
   flex-wrap: wrap;
   align-content: center;
@@ -176,7 +176,7 @@
   box-sizing: border-box;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31) .forum {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum {
   width: 520px;
   height: 270px;
   border-radius: 5px;
@@ -191,7 +191,7 @@
   box-sizing: border-box;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum::before {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum::before {
   content: "";
   position: absolute;
   top: 0;
@@ -238,7 +238,7 @@
   grid-row: 1;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31) .forum-entete {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum-entete {
   padding: 5px 10px;
   border-radius: 10px;
   font-size: var(--little-size);
@@ -270,7 +270,7 @@
   color:var(--textColorAccent);
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum.cat_new a.lastpost_link {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum.cat_new a.lastpost_link {
   background:var(--primaire);
   color:var(--textColorAccent);
 }
@@ -307,7 +307,7 @@ a.forumtitle:hover {
   color:var(--accent);
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) a.forumtitle {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) a.forumtitle {
   font-size: 30px;
   font-family:var(--titlefont);
   text-transform:uppercase;
@@ -328,7 +328,7 @@ a.forumtitle:hover {
   padding:5px;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31) .forum_content {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_content {
   grid-row-start: 3;
   margin:0 0 0 0;
   padding:5px;
@@ -359,7 +359,7 @@ a.forumtitle:hover {
   margin:10px 0 0 5px;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31) .forum_desc {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_desc {
   grid-row-start: 2;
   align-self: start;
   max-height: 120px;
@@ -371,13 +371,13 @@ a.forumtitle:hover {
   margin:5px;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum:hover .forum_desc {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum:hover .forum_desc {
   background:var(--accentTranspa);
   color:var(--textColor);
   overflow:auto;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum_desc img {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_desc img {
   position: absolute;
   top: 0;
   left: 0;
@@ -409,12 +409,12 @@ a.forumtitle:hover {
   border:solid 2px var(--neutral);
 }
 
-:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum_avatar {
+:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_avatar {
   width: 50px;
   height: 45px;
 }
 
-:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .forum_avatar img {
+:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_avatar img {
   background: var(--neutralDark);
   width: 50px;
   height: 45px;
@@ -433,7 +433,7 @@ a.forumtitle:hover {
   height:45px;
 }
 
-:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31) a.lastpost_link {
+:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) a.lastpost_link {
   display: block; 
   width: 100%; 
   height:21px;
@@ -446,11 +446,11 @@ a.forumtitle:hover {
   border-radius:2px;
 }
 
-:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31) a.lastpost_link:empty {
+:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) a.lastpost_link:empty {
   display: none;
 }
 
-:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31) a.lastpost_link:hover {
+:is(#c1, #c2, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) a.lastpost_link:hover {
   color: var(--textColor);
 }
 
@@ -460,7 +460,7 @@ a.forumtitle:hover {
   justify-content: space-between;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31)
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53)
 .forum_details {
   display: none;
 }
@@ -486,7 +486,7 @@ a.forumtitle:hover {
   margin:0 0 0 0;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31) .lastpost-author :is(strong, a) {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .lastpost-author :is(strong, a) {
   text-shadow: 0px 0px 5px #000;
 }
 
