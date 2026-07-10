@@ -765,7 +765,8 @@ a.forumtitle:hover {
   display:none;
 }
 
-#c1 .forum:nth-child(1) .forum_circle, #c1 .forum:nth-child(6) .forum_circle {
+#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle,
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -804,7 +805,7 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#c1 .forum_info {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_info {
   display:none;
   position:absolute;
   background:var(--neutral);
@@ -815,11 +816,12 @@ a.forumtitle:hover {
   clip-path: polygon(100% 0, 100% 100%, 5% 100%, 5% 24%, 0 0);
 }
 
-#c1 .forum_circle:hover + .forum_info {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_circle:hover + .forum_info {
   display:block;
 } 
 
-#c1 .forum:nth-child(1) .forum_info::before, #c1 .forum:nth-child(6) .forum_info::before {
+#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle,
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle {
   content: "propriété de la couronne";
 }
 
