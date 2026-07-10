@@ -806,7 +806,7 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
- {
+#f28 .forum:nth-child(5) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -848,8 +848,8 @@ a.forumtitle:hover {
   display:block;
 } 
 
-#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle,
-#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle {
+#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle::before,
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle::before {
   content: "propriété de la couronne";
 }
 
@@ -869,4 +869,8 @@ a.forumtitle:hover {
 
 #f26 .forum:nth-child(4) .forum_info::before {
   content: "Zone d'influence magique";
+}
+
+#f28 .forum:nth-child(5) .forum_info::before {
+  content: "QG des Veilleurs de Nuit";
 }
