@@ -779,7 +779,8 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#c1 .forum:nth-child(2) .forum_circle {
+#c1 .forum:nth-child(2) .forum_circle,
+#f27 .forum:nth-child(-n+4) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -852,11 +853,13 @@ a.forumtitle:hover {
   content: "propriété de la couronne";
 }
 
-#c1 .forum:nth-child(2) .forum_info {
+#c1 .forum:nth-child(2) .forum_info,
+#f27 .forum:nth-child(-n+4) .forum_info {
    padding:5px 5px 5px 18px;
 }
 
-#c1 .forum:nth-child(2) .forum_info::before {
+#c1 .forum:nth-child(2) .forum_info::before,
+#f27 .forum:nth-child(-n+4) .forum_info::before {
   content: "territoire de la meute Marylebone";
 }
 
