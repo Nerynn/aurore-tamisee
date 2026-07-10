@@ -805,6 +805,33 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
+#f26 .forum:nth-child(4) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3977338/arcanes-dark.png') no-repeat center 5px /50px var(--arcanes); 
+  cursor: pointer;
+}
+
+
+ {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3979723/scintillait.png') no-repeat center 5px /50px var(--secret2); 
+  cursor: pointer;
+}
+
 :is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_info {
   display:none;
   position:absolute;
@@ -837,3 +864,6 @@ a.forumtitle:hover {
   content: "territoire de la ruche Lexington";
 }
 
+#f26 .forum:nth-child(4) .forum_info::before {
+  content: "Zone d'influence magique";
+}
