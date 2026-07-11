@@ -860,8 +860,8 @@ a.forumtitle:hover {
   display:block;
 } 
 
-#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle::before,
-#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle::before {
+#c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_info::before,
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_info::before {
   content: "propriété de la couronne";
 }
 
