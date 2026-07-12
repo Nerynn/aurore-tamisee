@@ -744,7 +744,8 @@ a.forumtitle:hover {
  color:var(--textColor);
 }
 
-#c6 .forum:nth-child(3) #subforum a:nth-child(1):hover {
+#c6 .forum:nth-child(3) #subforum a:nth-child(1):hover,
+#c6 .forum:nth-child(3) #subforum a:nth-child(3):hover {
   border:solid 2px var(--accentClr);
   background:var(--accentClr);
   color:var(--textColorAccent);
@@ -757,7 +758,8 @@ a.forumtitle:hover {
  color:var(--textColor);
 }
 
-#c6 .forum:nth-child(4) #subforum a:nth-child(1):hover {
+#c6 .forum:nth-child(4) #subforum a:nth-child(1):hover,
+#c6 .forum:nth-child(6) #subforum a:nth-child(1):hover {
   border:solid 2px var(--accentClr);
   background:var(--accentClr);
   color:var(--textColorAccent);
