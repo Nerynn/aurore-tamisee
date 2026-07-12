@@ -207,7 +207,8 @@
 #c1 .forum:is(:nth-child(1), :nth-child(6))::before,
 #f26 .forum:is(:nth-child(-n+3), :nth-child(5))::before,
 #f28 .forum:nth-child(5)::before,
-#f31 .forum:nth-child(-n+4)::before {
+#f31 .forum:nth-child(-n+4)::before,
+#f53 .forum:nth-child(5)::before {
   background: linear-gradient(180deg, var(--diurnesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
@@ -798,7 +799,7 @@ a.forumtitle:hover {
   height:60px;
   border-radius:50%;
   border:solid 2px var(--neutral);
-  background:url('https://www.aht.li/3979971/traverser.png') no-repeat center 5px /40px var(--diurnes); 
+  background:url('https://www.aht.li/3979971/traverser.png') no-repeat center /40px var(--diurnes); 
   cursor: pointer;
 }
 
@@ -819,7 +820,7 @@ a.forumtitle:hover {
 
 #c1 .forum:nth-child(4) .forum_circle,
 #f29 .forum:nth-child(-n+5) .forum_circle,
-#f51 .forum:nth-child(-n+1) .forum_circle,
+#f51 .forum:nth-child(-n+2) .forum_circle,
 #f53 .forum:nth-child(1) .forum_circle {
   display:block;
   position:absolute;
@@ -862,7 +863,7 @@ a.forumtitle:hover {
 #f26 .forum:nth-child(4) .forum_circle,
 #f29 .forum:nth-child(6) .forum_circle,
 #f48 .forum:nth-child(3) .forum_circle,
-#f51 .forum:nth-child(3n+1) .forum_circle,
+#f51 .forum:nth-child(n+3):nth-child(-n+4) .forum_circle,
 #f52 .forum:nth-child(6) .forum_circle,
 #f53 .forum:nth-child(2) .forum_circle {
   display:block;
@@ -908,11 +909,11 @@ a.forumtitle:hover {
   content: "territoire de la meute Marylebone";
 }
 
-#f27 .forum:nth-child(-n+4) .forum_info::before {
+#f50 .forum:nth-child(2) .forum_info::before {
   content: "territoire de la meute Stoney";
 }
 
-#f50 .forum:nth-child(-n+3) .forum_info::before {
+#f50 .forum:is(:nth-child(1), :nth-child(3)) .forum_info::before {
   content: "Influence de la meute Stoney";
 }
 
