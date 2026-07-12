@@ -212,12 +212,14 @@
 }
 
 #c1 .forum:nth-child(2)::before,
-#f27 .forum:nth-child(-n+4)::before {
+#f27 .forum:nth-child(-n+4)::before,
+#f50 .forum:nth-child(2)::before {
   background: linear-gradient(180deg, var(--griffesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 #c1 .forum:nth-child(4)::before,
-#f29 .forum:nth-child(-n+5)::before {
+#f29 .forum:nth-child(-n+5)::before,
+#f51 .forum:nth-child(2)::before {
   background: linear-gradient(180deg, var(--crocsalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
@@ -228,7 +230,7 @@
 #f26 .forum:nth-child(4)::before,
 #f29 .forum:nth-child(6)::before,
 #f48 .forum:nth-child(3)::before,
-#f51 .forum:nth-child(3n+1)::before,
+#f51 .forum:nth-child(n+3):nth-child(-n+4)::before,
 #f52 .forum:nth-child(6)::before,
 #f53 .forum:nth-child(2)::before
 {
@@ -787,8 +789,22 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
+#f53 .forum:nth-child(5) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background:url('https://www.aht.li/3979971/traverser.png') no-repeat center 5px /40px var(--diurnes); 
+  cursor: pointer;
+}
+
 #c1 .forum:nth-child(2) .forum_circle,
-#f27 .forum:nth-child(-n+4) .forum_circle {
+#f27 .forum:nth-child(-n+4) .forum_circle,
+#f50 .forum:nth-child(-n+3) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -802,7 +818,9 @@ a.forumtitle:hover {
 }
 
 #c1 .forum:nth-child(4) .forum_circle,
-#f29 .forum:nth-child(-n+5) .forum_circle {
+#f29 .forum:nth-child(-n+5) .forum_circle,
+#f51 .forum:nth-child(-n+1) .forum_circle,
+#f53 .forum:nth-child(1) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -890,15 +908,32 @@ a.forumtitle:hover {
   content: "territoire de la meute Marylebone";
 }
 
+#f27 .forum:nth-child(-n+4) .forum_info::before {
+  content: "territoire de la meute Stoney";
+}
+
+#f50 .forum:nth-child(-n+3) .forum_info::before {
+  content: "Influence de la meute Stoney";
+}
+
 #c1 .forum:nth-child(4) .forum_info::before,
 #f29 .forum:nth-child(-n+5) .forum_info::before {
   content: "territoire de la ruche Lexington";
 }
 
+#f51 .forum:nth-child(2) .forum_info::before {
+  content: "territoire de la ruche Redcastle";
+}
+
+#f51 .forum:nth-child(1) .forum_info::before,
+#f53 .forum:nth-child(1) .forum_info::before {
+  content: "Influence de la ruche Redcastle";
+}
+
 #f26 .forum:nth-child(4) .forum_info::before,
 #f29 .forum:nth-child(6) .forum_info::before,
 #f48 .forum:nth-child(3) .forum_info::before,
-#f51 .forum:nth-child(3n+1) .forum_info::before,
+#f51 .forum:nth-child(n+3):nth-child(-n+4) .forum_info::before,
 #f52 .forum:nth-child(6) .forum_info::before,
 #f53 .forum:nth-child(2) .forum_info::before {
   content: "Zone d'influence magique";
@@ -910,4 +945,8 @@ a.forumtitle:hover {
 
 #f30 .forum:nth-child(2) .forum_info::before {
   content: "Siège du DEM";
+}
+
+#f53 .forum:nth-child(5) .forum_info::before {
+  content: "Siège du SHAHS";
 }
