@@ -226,7 +226,12 @@
 }
 
 #f26 .forum:nth-child(4)::before,
-#f29 .forum:nth-child(6)::before {
+#f29 .forum:nth-child(6)::before,
+#f48 .forum:nth-child(3)::before,
+#f51 .forum:nth-child(3n+1)::before,
+#f52 .forum:nth-child(6)::before,
+#f53 .forum:nth-child(2)::before
+{
   background: linear-gradient(180deg, var(--secret2alt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
@@ -729,7 +734,8 @@ a.forumtitle:hover {
   color:var(--textColor);
 }
 
-#c6 .forum:nth-child(3) #subforum a:nth-child(1) {
+#c6 .forum:nth-child(3) #subforum a:nth-child(1),
+#c6 .forum:nth-child(3) #subforum a:nth-child(3) {
  border:solid 2px var(--neutral);
  background: linear-gradient(90deg, var(--neutral) 30%, var(--griffes) 100%); 
  color:var(--textColor);
@@ -741,7 +747,8 @@ a.forumtitle:hover {
   color:var(--textColorAccent);
 }
 
-#c6 .forum:nth-child(4) #subforum a:nth-child(1) {
+#c6 .forum:nth-child(4) #subforum a:nth-child(1),
+#c6 .forum:nth-child(6) #subforum a:nth-child(1) {
  border:solid 2px var(--neutral);
  background: linear-gradient(90deg, var(--neutral) 30%, var(--crocs) 100%); 
  color:var(--textColor);
@@ -835,7 +842,11 @@ a.forumtitle:hover {
 }
 
 #f26 .forum:nth-child(4) .forum_circle,
-#f29 .forum:nth-child(6) .forum_circle {
+#f29 .forum:nth-child(6) .forum_circle,
+#f48 .forum:nth-child(3) .forum_circle,
+#f51 .forum:nth-child(3n+1) .forum_circle,
+#f52 .forum:nth-child(6) .forum_circle,
+#f53 .forum:nth-child(2) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -885,7 +896,11 @@ a.forumtitle:hover {
 }
 
 #f26 .forum:nth-child(4) .forum_info::before,
-#f29 .forum:nth-child(6) .forum_info::before {
+#f29 .forum:nth-child(6) .forum_info::before,
+#f48 .forum:nth-child(3) .forum_info::before,
+#f51 .forum:nth-child(3n+1) .forum_info::before,
+#f52 .forum:nth-child(6) .forum_info::before,
+#f53 .forum:nth-child(2) .forum_info::before {
   content: "Zone d'influence magique";
 }
 
