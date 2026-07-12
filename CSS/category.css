@@ -766,7 +766,8 @@ a.forumtitle:hover {
 }
 
 #c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_circle,
-#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle {
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_circle,
+#f31 .forum:nth-child(-n+4) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -793,7 +794,8 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#c1 .forum:nth-child(4) .forum_circle {
+#c1 .forum:nth-child(4) .forum_circle,
+#f29 .forum:nth-child(-n+5) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -806,7 +808,7 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
- {
+ #f30 .forum:nth-child(2) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -832,7 +834,8 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#f26 .forum:nth-child(4) .forum_circle {
+#f26 .forum:nth-child(4) .forum_circle,
+#f29 .forum:nth-child(6) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -861,7 +864,8 @@ a.forumtitle:hover {
 } 
 
 #c1 .forum:is(:nth-child(1), :nth-child(6)) .forum_info::before,
-#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_info::before {
+#f26 .forum:is(:nth-child(-n+3), :nth-child(5)) .forum_info::before,
+#f31 .forum:nth-child(-n+4) .forum_info::before {
   content: "propriété de la couronne";
 }
 
@@ -875,14 +879,20 @@ a.forumtitle:hover {
   content: "territoire de la meute Marylebone";
 }
 
-#c1 .forum:nth-child(4) .forum_info::before {
+#c1 .forum:nth-child(4) .forum_info::before,
+#f29 .forum:nth-child(-n+5) .forum_info::before {
   content: "territoire de la ruche Lexington";
 }
 
-#f26 .forum:nth-child(4) .forum_info::before {
+#f26 .forum:nth-child(4) .forum_info::before,
+#f29 .forum:nth-child(6) .forum_info::before {
   content: "Zone d'influence magique";
 }
 
 #f28 .forum:nth-child(5) .forum_info::before {
   content: "QG des Veilleurs de Nuit";
+}
+
+#f30 .forum:nth-child(2) .forum_info::before {
+  content: "Siège du DEM";
 }
