@@ -885,8 +885,6 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#f26 .forum:nth-child(4) .forum_circle,
-#f29 .forum:nth-child(6) .forum_circle,
 #f48 .forum:nth-child(3) .forum_circle,
 #f51 .forum:nth-child(n+3):nth-child(-n+4) .forum_circle,
 #f52 .forum:nth-child(6) .forum_circle,
@@ -903,7 +901,49 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_info {
+#f26 .forum:nth-child(4) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background: url('https://www.aht.li/3979723/scintillait.png') no-repeat 5px center / 40px, 
+  linear-gradient(141deg, var(--diurnes) 0%, var(--secret2) 100%);
+  cursor: pointer;
+}
+
+#f29 .forum:nth-child(6) .forum_circle {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background: url('https://www.aht.li/3979723/scintillait.png') no-repeat 5px center / 40px, 
+  linear-gradient(141deg, var(--crocs) 0%, var(--secret2) 100%);
+  cursor: pointer;
+}
+
+#f104 .forum:nth-child(-n+2) .forum_circle, {
+  display:block;
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:solid 2px var(--neutral);
+  background: url('https://www.aht.li/3979723/scintillait.png') no-repeat 5px center / 40px, 
+  linear-gradient(141deg, var(--griffes) 0%, var(--secret2) 100%);
+  cursor: pointer;
+}
+
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_info {
   display:none;
   position:absolute;
   background:var(--neutral);
@@ -914,7 +954,7 @@ a.forumtitle:hover {
   clip-path: polygon(100% 0, 100% 100%, 5% 100%, 5% 24%, 0 0);
 }
 
-:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forum_circle:hover + .forum_info {
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_circle:hover + .forum_info {
   display:block;
 } 
 
@@ -956,13 +996,27 @@ a.forumtitle:hover {
   content: "Influence de la ruche Redcastle";
 }
 
-#f26 .forum:nth-child(4) .forum_info::before,
-#f29 .forum:nth-child(6) .forum_info::before,
 #f48 .forum:nth-child(3) .forum_info::before,
 #f51 .forum:nth-child(n+3):nth-child(-n+4) .forum_info::before,
 #f52 .forum:nth-child(6) .forum_info::before,
 #f53 .forum:nth-child(2) .forum_info::before {
   content: "Zone d'influence magique";
+}
+
+#f26 .forum:nth-child(4) .forum_info::before {
+  content: "Zone d'influence magique - Propriété de la Couronne";
+}
+
+#f29 .forum:nth-child(6) .forum_info::before {
+  content: "Zone d'influence magique - Territoire Lexington";
+}
+
+#f104 .forum:nth-child(1) .forum_info::before {
+  content: "Zone d'influence magique - Territoire Marylebone";
+}
+
+#f104 .forum:nth-child(2) .forum_info::before {
+  content: "Zone d'influence magique - Territoire Stoney";
 }
 
 #f28 .forum:nth-child(5) .forum_info::before {
