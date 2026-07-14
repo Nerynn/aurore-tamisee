@@ -369,10 +369,19 @@ a.forumtitle:hover {
   margin-top: 10px;
 }
 
-:is(#c1, #c5, #c6) .forum_content {
+:is(#c1, #c6) .forum_content,
+#c5:nth-child(-n+2) .forum_content {
   grid-column-start: 1;
   grid-row-start: 3;
   margin-top:-70px;
+  padding:5px;
+}
+
+:is(#c1, #c6) .forum_content,
+#c5:nth-child(3) .forum_content {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  margin-top:-190px;
   padding:5px;
 }
 
