@@ -161,51 +161,45 @@
   border-radius: 5px;
 }
 
-:is(#c1, #c6) .forum,
-#c5 .forum:nth-child(1) {
-  width: 520px;
-  height:270px;
+/* Base commune à TOUTES les cartes de forum */
+:is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
+#c5 .forum:nth-child(-n+3) {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 210px; 
-  grid-template-rows: auto 1fr auto; 
-  gap: 10px;
   padding: 5px;
   box-sizing: border-box;
 }
 
+/* 1. Spécificités de la grille asymétrique */
+:is(#c1, #c6) .forum, 
+#c5 .forum:nth-child(1) {
+  width: 520px;
+  height: 270px;
+  grid-template-columns: 1fr 210px; 
+  grid-template-rows: auto 1fr auto; 
+  gap: 10px;
+}
+
+/* 2. Spécificités de la grille verticale classique */
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
 #c5 .forum:nth-child(2) {
   width: 520px;
   height: 270px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr;
   gap: 5px;
-  padding: 5px;
-  box-sizing: border-box;
 }
 
+/* 3. Spécificités de la grande bannière */
 #c5 .forum:nth-child(3) {
   width: 1060px;
   height: 200px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr;
   gap: 5px;
-  padding: 5px;
-  box-sizing: border-box;
 }
 
 :is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum::before {
@@ -362,6 +356,7 @@ a.forumtitle:hover {
   font-weight:200;
 }
 
+/* Base commune pour le contenu des forums */
 .forum_content {
   display: flex;
   gap: 10px;
@@ -369,27 +364,32 @@ a.forumtitle:hover {
   margin-top: 10px;
 }
 
+/* Positionnement propre pour #c1, #c6 et les deux premiers enfants de #c5 */
 :is(#c1, #c6) .forum_content,
-#c5:nth-child(-n+2) .forum_content {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  margin-top:-70px;
-  padding:5px;
+#c5 .forum:nth-child(-n+2) .forum_content { /* Correction du sélecteur parent */
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end; /* Force le bloc à se coller en bas de sa ligne de grille */
+  margin-top: 0;   /* On supprime la marge négative instable */
+  padding: 5px;
 }
 
-#c5:nth-child(3) .forum_content {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  margin-top:-190px;
-  padding:5px;
+/* Positionnement propre pour le troisième forum (bannière) de #c5 */
+#c5 .forum:nth-child(3) .forum_content { /* Correction du sélecteur parent */
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end; /* Aligné proprement en bas */
+  margin-top: 0;   /* On supprime également le -190px */
+  padding: 5px;
 }
 
+/* Positionnement pour les forums à structure verticale */
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_content {
-  grid-row-start: 3;
-  margin:0 0 0 0;
-  padding:5px;
-  position:relative;
-  bottom:-20px;
+  grid-row: 3;
+  align-self: end; /* Reste sagement au bas de la 3ème ligne */
+  margin: 0;
+  padding: 5px;
+  /* Retrait du position: relative et du bottom: -20px qui risquent de faire déborder le texte hors de la carte */
 }
 
 /*description du forum*/
