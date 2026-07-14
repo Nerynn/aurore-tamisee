@@ -44,7 +44,7 @@
   gap:20px;
 }
 
-:is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53) .forums {
+:is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forums {
   display:flex;
   flex-wrap: wrap;
   align-content: center;
@@ -691,7 +691,7 @@ a.forumtitle:hover {
   color:var(--textColor);
 }
 
-#c6 .forum:nth-child(1) #subforum a:nth-child(-n+2) {
+#c5 .forum:nth-child(1) #subforum a:nth-child(-n+2) {
  border:solid 2px var(--neutral);
  background: linear-gradient(90deg, var(--griffes) 30%, var(--secret2) 100%); 
  color:#292828;
@@ -969,6 +969,12 @@ a.forumtitle:hover {
    padding:5px 5px 5px 18px;
 }
 
+#f26 .forum:nth-child(4) .forum_info,
+#f29 .forum:nth-child(6) .forum_info,
+#f104 .forum:nth-child(-n+2) .forum_info, {
+   padding:5px 5px 5px 30px;
+}
+
 #c1 .forum:nth-child(2) .forum_info::before,
 #f27 .forum:nth-child(-n+4) .forum_info::before {
   content: "territoire de la meute Marylebone";
@@ -1008,15 +1014,15 @@ a.forumtitle:hover {
 }
 
 #f29 .forum:nth-child(6) .forum_info::before {
-  content: "Zone d'influence magique - Territoire Lexington";
+  content: "Zone d'influence magique - Territoire de la ruche Lexington";
 }
 
 #f104 .forum:nth-child(1) .forum_info::before {
-  content: "Zone d'influence magique - Territoire Marylebone";
+  content: "Zone d'influence magique - Territoire de la meute Marylebone";
 }
 
 #f104 .forum:nth-child(2) .forum_info::before {
-  content: "Zone d'influence magique - Territoire Stoney";
+  content: "Zone d'influence magique - Territoire de la meute Stoney";
 }
 
 #f28 .forum:nth-child(5) .forum_info::before {
