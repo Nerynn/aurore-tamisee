@@ -697,7 +697,7 @@ a.forumtitle:hover {
  color:#292828;
 }
 
-#c6 .forum:nth-child(1) #subforum a:nth-child(-n+2):hover {
+#c5 .forum:nth-child(1) #subforum a:nth-child(-n+2):hover {
   border:solid 2px transparent;
   background:linear-gradient(var(--neutral), var(--neutral)) padding-box,
              linear-gradient(to right, var(--griffes), var(--secret2)) border-box;
