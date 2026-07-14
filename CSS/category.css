@@ -364,6 +364,11 @@ a.forumtitle:hover {
   z-index: 10;
 }
 
+#c2 .forum_content {
+  position:unset;
+  margin-top: 10px;
+}
+
 :is(#c1, #c6) .forum_content,
 #c5 .forum:nth-child(1) .forum_content {
   width: calc(100% - 240px);
