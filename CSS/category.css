@@ -218,6 +218,18 @@
   background: linear-gradient(180deg, var(--griffesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
+#f26 .forum:nth-child(4)::before {
+  background: linear-gradient(180deg, var(--diurnesalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+}
+
+#f104 .forum:nth-child(-n+2)::before {
+  background: linear-gradient(180deg, var(--griffesalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+}
+
+#f29 .forum:nth-child(6)::before {
+  background: linear-gradient(180deg, var(--crocsalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+}
+
 #c1 .forum:nth-child(4)::before,
 #f29 .forum:nth-child(-n+5)::before,
 #f51 .forum:nth-child(2)::before {
@@ -228,8 +240,6 @@
   background: linear-gradient(180deg, var(--arcanesalt) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
-#f26 .forum:nth-child(4)::before,
-#f29 .forum:nth-child(6)::before,
 #f48 .forum:nth-child(3)::before,
 #f51 .forum:nth-child(n+3):nth-child(-n+4)::before,
 #f52 .forum:nth-child(6)::before,
@@ -249,7 +259,7 @@
   text-transform:uppercase;
 }
 
-:is(#c1, #c6) .forum-entete {
+:is(#c1, #c5, #c6) .forum-entete {
   padding: 5px 10px;
   border-radius: 10px;
   font-size: var(--little-size);
@@ -342,7 +352,7 @@ a.forumtitle:hover {
   margin-top: 10px;
 }
 
-:is(#c1, #c6) .forum_content {
+:is(#c1, #c5, #c6) .forum_content {
   grid-column-start: 1;
   grid-row-start: 3;
   margin-top:-70px;
@@ -678,6 +688,19 @@ a.forumtitle:hover {
   border:solid 2px transparent;
   background:linear-gradient(var(--neutral), var(--neutral)) padding-box,
              linear-gradient(to right, var(--crocs), var(--secret2)) border-box;
+  color:var(--textColor);
+}
+
+#c6 .forum:nth-child(1) #subforum a:nth-child(-n+2) {
+ border:solid 2px var(--neutral);
+ background: linear-gradient(90deg, var(--griffes) 30%, var(--secret2) 100%); 
+ color:#292828;
+}
+
+#c6 .forum:nth-child(1) #subforum a:nth-child(-n+2):hover {
+  border:solid 2px transparent;
+  background:linear-gradient(var(--neutral), var(--neutral)) padding-box,
+             linear-gradient(to right, var(--griffes), var(--secret2)) border-box;
   color:var(--textColor);
 }
 
