@@ -219,15 +219,15 @@
 }
 
 #f26 .forum:nth-child(4)::before {
-  background: linear-gradient(180deg, var(--diurnesalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+  background: linear-gradient(180deg, var(--diurnesalt) 0%, var(--secret2alt) 20%, rgba(0, 0, 0, 0.03) 100%);
 }
 
 #f104 .forum:nth-child(-n+2)::before {
-  background: linear-gradient(180deg, var(--griffesalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+  background: linear-gradient(180deg, var(--griffesalt) 0%, var(--secret2alt) 20%, rgba(0, 0, 0, 0.03) 100%);
 }
 
 #f29 .forum:nth-child(6)::before {
-  background: linear-gradient(180deg, var(--crocsalt) 0%, var(--secret2alt) 50%, rgba(0, 0, 0, 0.03) 100%);
+  background: linear-gradient(180deg, var(--crocsalt) 0%, var(--secret2alt) 20%, rgba(0, 0, 0, 0.03) 100%);
 }
 
 #c1 .forum:nth-child(4)::before,
