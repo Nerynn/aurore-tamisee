@@ -180,7 +180,7 @@
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
 #c5 .forum:nth-child(2) {
   width: 520px;
-  height: 270px;
+  height: 200px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
