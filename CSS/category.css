@@ -161,7 +161,8 @@
   border-radius: 5px;
 }
 
-:is(#c1, #c5, #c6) .forum {
+:is(#c1, #c6) .forum,
+#c5 .forum:nth-child(1) {
   width: 520px;
   height:270px;
   border-radius: 5px;
@@ -176,8 +177,24 @@
   box-sizing: border-box;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
+#c5 .forum:nth-child(2) {
   width: 520px;
+  height: 270px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr 2fr 2fr;
+  gap: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#c5 .forum:nth-child(3) {
+  width: 900px;
   height: 270px;
   border-radius: 5px;
   position: relative;
@@ -929,7 +946,7 @@ a.forumtitle:hover {
   cursor: pointer;
 }
 
-#f104 .forum:nth-child(-n+2) .forum_circle, {
+#f104 .forum:nth-child(-n+2) .forum_circle {
   display:block;
   position:absolute;
   top:10px;
@@ -971,7 +988,7 @@ a.forumtitle:hover {
 
 #f26 .forum:nth-child(4) .forum_info,
 #f29 .forum:nth-child(6) .forum_info,
-#f104 .forum:nth-child(-n+2) .forum_info, {
+#f104 .forum:nth-child(-n+2) .forum_info {
    padding:5px 5px 5px 30px;
 }
 
