@@ -161,7 +161,6 @@
   border-radius: 5px;
 }
 
-/* Base commune à TOUTES les cartes de forum */
 :is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
 #c5 .forum:nth-child(-n+3) {
   border-radius: 5px;
@@ -173,7 +172,6 @@
   box-sizing: border-box;
 }
 
-/* 1. Spécificités de la grille asymétrique */
 :is(#c1, #c6) .forum, 
 #c5 .forum:nth-child(1) {
   width: 520px;
@@ -183,7 +181,6 @@
   gap: 10px;
 }
 
-/* 2. Spécificités de la grille verticale classique */
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
 #c5 .forum:nth-child(2) {
   width: 520px;
@@ -193,7 +190,6 @@
   gap: 5px;
 }
 
-/* 3. Spécificités de la grande bannière */
 #c5 .forum:nth-child(3) {
   width: 1060px;
   height: 200px;
@@ -356,7 +352,6 @@ a.forumtitle:hover {
   font-weight:200;
 }
 
-/* Base commune pour le contenu des forums */
 .forum_content {
   display: flex;
   gap: 10px;
@@ -364,32 +359,29 @@ a.forumtitle:hover {
   margin-top: 10px;
 }
 
-/* Positionnement propre pour #c1, #c6 et les deux premiers enfants de #c5 */
 :is(#c1, #c6) .forum_content,
-#c5 .forum:nth-child(-n+2) .forum_content { /* Correction du sélecteur parent */
+#c5 .forum:nth-child(-n+2) .forum_content { 
   grid-column: 1;
   grid-row: 3;
-  align-self: end; /* Force le bloc à se coller en bas de sa ligne de grille */
-  margin-top: 0;   /* On supprime la marge négative instable */
+  align-self: end; 
+  margin-top: 0;  
   padding: 5px;
 }
 
-/* Positionnement propre pour le troisième forum (bannière) de #c5 */
-#c5 .forum:nth-child(3) .forum_content { /* Correction du sélecteur parent */
+#c5 .forum:nth-child(3) .forum_content { 
   grid-column: 1;
   grid-row: 3;
-  align-self: end; /* Aligné proprement en bas */
-  margin-top: 0;   /* On supprime également le -190px */
+  align-self: end; 
+  margin-top: 0;   
   padding: 5px;
 }
 
-/* Positionnement pour les forums à structure verticale */
+
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_content {
   grid-row: 3;
-  align-self: end; /* Reste sagement au bas de la 3ème ligne */
+  align-self: end; 
   margin: 0;
   padding: 5px;
-  /* Retrait du position: relative et du bottom: -20px qui risquent de faire déborder le texte hors de la carte */
 }
 
 /*description du forum*/
@@ -450,65 +442,59 @@ a.forumtitle:hover {
 
 /*conteneur avatar du dernier posteur*/
 .forum_avatar {
-  width: 60px;
-  height: 60px;
-  border-radius:5px;
+  width: 50px;
+  height: 45px;
+  border-radius: 5px;
 }
 
 .forum_avatar img {
   background: var(--neutralDark);
-  width: 60px;
-  height: 60px;
-  border-radius:5px;
-  object-fit: cover;
-  object-position: center;
-  border:solid 2px var(--neutral);
-}
-
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, f#104) .forum_avatar {
   width: 50px;
   height: 45px;
-}
-
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, f#104) .forum_avatar img {
-  background: var(--neutralDark);
-  width: 50px;
-  height: 45px;
+  border-radius: 5px;
   object-fit: cover;
   object-position: center;
+  border: solid 2px var(--neutral);
 }
 
-/* dernier message*/
+/* ==========================================
+   DERNIER MESSAGE & LIENS
+   ========================================== */
+
 .forum_lastpost {
-  width:100%;
+  width: 100%;
   text-transform: uppercase;
-  font-size:var(--little-size);
+  font-size: var(--little-size);
 }
 
 #c2 .forum_lastpost span {
-  height:45px;
+  height: 45px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, f#104) a.lastpost_link {
+:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
   display: block; 
   width: 100%; 
-  height:21px;
-  overflow:hidden;
+  height: 21px;
+  overflow: hidden;
   background: var(--neutral);
   color: var(--textColor);
   padding: 2px 5px 3px 5px;
-  margin:0 0 5px 0;
+  margin: 0 0 5px 0;
   box-sizing: border-box; 
-  border-radius:2px;
+  border-radius: 2px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, f#104) a.lastpost_link:empty {
+:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
   display: none;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, f#104) a.lastpost_link:hover {
+:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
   color: var(--textColor);
 }
+
+/* ==========================================
+   DÉTAILS ET AUTEUR
+   ========================================== */
 
 .forum_details {
   padding-top: 10px;
@@ -516,30 +502,28 @@ a.forumtitle:hover {
   justify-content: space-between;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104)
-.forum_details {
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_details {
   display: none;
 }
 
 .lastpost-author {
   font-size: 0;
   display: block;
-  vertical-align:middle;
+  vertical-align: middle;
   line-height: 1; 
   margin-top: 2px; 
 }
 
 .lastpost-author span {
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
 }
-
 
 .lastpost-author strong, 
 .lastpost-author a {
   font-size: var(--little-size); 
   display: inline-block;
   line-height: normal;
-  margin:0 0 0 0;
+  margin: 0;
 }
 
 :is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .lastpost-author :is(strong, a) {
@@ -551,9 +535,9 @@ a.forumtitle:hover {
 }
 
 .last-post-icon {
-  margin:-2px 0 0 0!important;
+  margin: -2px 0 0 0 !important;
   display: inline-block;
-  vertical-align:top;
+  vertical-align: top;
 }
 
 /* liens des sous forums */
