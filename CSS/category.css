@@ -356,32 +356,27 @@ a.forumtitle:hover {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 10px;
+  position: absolute; 
+  bottom: 10px;    
+  left: 10px;        
+  margin: 0;
+  padding: 0;
+  z-index: 10;
 }
 
 :is(#c1, #c6) .forum_content,
-#c5 .forum:nth-child(-n+2) .forum_content { 
-  grid-column: 1;
-  grid-row: 3;
-  align-self: end; 
-  margin-top: 0;  
-  padding: 5px;
-}
-
-#c5 .forum:nth-child(3) .forum_content { 
-  grid-column: 1;
-  grid-row: 3;
-  align-self: end; 
-  margin-top: 0;   
-  padding: 5px;
+#c5 .forum:nth-child(1) .forum_content {
+  width: calc(100% - 240px);
 }
 
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_content {
-  grid-row: 3;
-  align-self: end; 
-  margin: 0;
-  padding: 5px;
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_content,
+#c5 .forum:nth-child(2) .forum_content {
+  width: calc(100% - 20px); 
+}
+
+#c5 .forum:nth-child(3) .forum_content {
+  width: calc(100% - 20px);
 }
 
 /*description du forum*/
