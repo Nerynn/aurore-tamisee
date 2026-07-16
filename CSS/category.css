@@ -172,7 +172,7 @@
   margin-bottom: 0;
 }
 
-#c2 .forum {
+:is(#c2, #f3, #f2, #f10, #f12, #f7) .forum {
   margin:0 0 10px 0;
   background:transparent;
   border-radius: 5px;
