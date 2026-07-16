@@ -178,12 +178,6 @@
   border-radius: 5px;
 }
 
-:is(#f3, #f2, #f10, #f12, #f7) .forum {
-  margin:0 0 5px 0;
-  background:transparent;
-  border-radius: 5px;
-}
-
 :is(#c1, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum,
 #c5 .forum:nth-child(-n+3) {
   border-radius: 5px;
