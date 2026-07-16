@@ -21,9 +21,9 @@
   opacity:0.2;
 }
 
-#c2.category {
+:is(#c2, #f3).category {
   overflow: hidden;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
 }
 
 .forums-guidebook {
@@ -35,12 +35,23 @@
   grid-template-columns: 1fr auto; 
   gap: 20px;
   background:var(--neutralDark);
-  padding:15px 15px 15px 15px;
+  padding:15px;
+}
+
+#f3 .forums-guidebook {
+  background:var(--neutralDark);
+  padding:15px 15px 0 15px;
 }
 
 #c2 .forums {
   display:grid;
   grid-template-columns:repeat(6, 1fr);
+  gap:20px;
+}
+
+#f3 .forums {
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
   gap:20px;
 }
 
@@ -76,7 +87,8 @@
   font-weight:300;
 }
 
-#c2 .cate_title {
+#c2 .cate_title, 
+#f3 .cate_title {
   grid-column: span 2; 
 }
 
@@ -157,6 +169,12 @@
 
 #c2 .forum {
   margin:0 0 10px 0;
+  background:transparent;
+  border-radius: 5px;
+}
+
+#f3 .forum {
+  margin:0 0 5px 0;
   background:transparent;
   border-radius: 5px;
 }
@@ -257,13 +275,13 @@
 
 /* titre d'un forum */
 
-#c2 .forum-entete {
-  background:var(--neutral);
-  padding:5px;
-  border-radius:10px;
-  color:var(--accentClr);
-  font-size:var(--little-size);
-  text-transform:uppercase;
+:is(#c2, #f3) .forum-entete {
+  background: var(--neutral);
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--accentClr);
+  font-size: var(--little-size);
+  text-transform: uppercase;
 }
 
 :is(#c1, #c5, #c6) .forum-entete {
@@ -284,42 +302,71 @@
   text-align: right;
 }
 
-#c2 .forum:nth-child(3) .forum-entete, 
-#c2 .forum:nth-child(5) .forum-entete {
+:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
+  margin: 10px;
+}
+
+/*entete spécifique*/
+
+#c2 .forum:is(:nth-child(3), :nth-child(5)) .forum-entete {
   background: var(--accentClr);
-  color:var(--textColorAccent);
+  color: var(--textColorAccent);
 }
 
 #c2 .forum:nth-child(4) .forum-entete {
   background: var(--contrastLight);
-  color:var(--textColorAccent);
+  color: var(--textColorAccent);
 }
 
-#c2 .forum.cat_new .forum-entete {
+#f3 .forum:nth-child(-n+2) .forum-entete {
+  background: var(--accent);
+  color: var(--textColor);
+}
+
+/**nouveaux messages**/
+/*nouveaux messages entete*/
+
+:is(#c2 .forum.cat_new, #f3 .forum.forum_new) .forum-entete {
   background: linear-gradient(90deg, var(--neutral) 35%, var(--tertiaire) 100%);
 }
 
-:is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
-  margin:10px;
-}
+/*nouveaux messages entete spéficique*/
 
-#c2 .forum.cat_new a.lastpost_link {
-  background:var(--tertiaire);
-  color:var(--textColorAccent);
-}
-
-:is(#c1, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum.cat_new a.lastpost_link {
-  background:var(--primaire);
-  color:var(--textColorAccent);
-}
-
-#c2 .forum:nth-child(3).cat_new .forum-entete, #c2 .forum:nth-child(5).cat_new .forum-entete{
+#c2 .forum:is(:nth-child(3), :nth-child(5)).cat_new .forum-entete {
   background: linear-gradient(90deg, var(--accentClr) 35%, var(--tertiaire) 100%);
 }
 
 #c2 .forum:nth-child(4).cat_new .forum-entete {
   background: linear-gradient(90deg, var(--contrastLight) 35%, var(--tertiaire) 100%);
 }
+
+#f3 .forum:nth-child(-n+2).forum_new .forum-entete {
+  background: linear-gradient(90deg, var(--accent) 35%, var(--tertiaire) 100%);
+}
+
+/*nouveaux messages lien dernier message*/
+
+#c2 .forum.cat_new a.lastpost_link {
+  background:var(--tertiaire);
+  color:var(--textColorAccent);
+}
+
+#f3 .forum.forum_new a.lastpost_link {
+  background:var(--tertiaire);
+  color:var(--textColorAccent);
+}
+
+:is(#c1, #c5, #c6) .forum.cat_new a.lastpost_link {
+  background:var(--primaire);
+  color:var(--textColorAccent);
+}
+
+:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum.forum_new a.lastpost_link {
+  background:var(--primaire);
+  color:var(--textColorAccent);
+}
+
+/*titre du forum*/
 
 a.forumtitle {
   font-size: var(--large-size);
@@ -352,6 +399,8 @@ a.forumtitle:hover {
   font-weight:200;
 }
 
+/*info dernier message posté*/
+
 .forum_content {
   display: flex;
   gap: 10px;
@@ -364,8 +413,8 @@ a.forumtitle:hover {
   z-index: 10;
 }
 
-#c2 .forum_content {
-  position:unset;
+:is(#c2, #f3) .forum_content {
+  position: unset;
   margin-top: 10px;
 }
 
@@ -373,7 +422,6 @@ a.forumtitle:hover {
 #c5 .forum:nth-child(1) .forum_content {
   width: calc(100% - 240px);
 }
-
 
 :is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_content,
 #c5 .forum:nth-child(2) .forum_content {
@@ -436,7 +484,8 @@ a.forumtitle:hover {
   z-index: -3;
 }
 
-#c2 .forum:nth-child(n+3):nth-child(-n+5) .forum_desc {
+#c2 .forum:nth-child(n+3):nth-child(-n+5) .forum_desc,
+#f3 .forum_desc {
   display: none;
 }
 
@@ -467,11 +516,11 @@ a.forumtitle:hover {
   font-size: var(--little-size);
 }
 
-#c2 .forum_lastpost span {
+:is(#c2, #f3) .forum_lastpost span {
   height: 45px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
+:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
   display: block; 
   width: 100%; 
   height: 21px;
@@ -484,11 +533,11 @@ a.forumtitle:hover {
   border-radius: 2px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
+:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
   display: none;
 }
 
-:is(#c1, #c2, #c5, #c6, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
+:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
   color: var(--textColor);
 }
 
@@ -607,6 +656,10 @@ a.forumtitle:hover {
   display: block;
   width: 200px;
   box-sizing: border-box;
+}
+
+:is(#f3) #subforum {
+  display:none;
 }
 
 /*SUB TERRITOIRE*/
