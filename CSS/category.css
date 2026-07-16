@@ -21,7 +21,7 @@
   opacity:0.2;
 }
 
-:is(#c2, #f3).category {
+:is(#c2, #f3, #f2, #f10, #f12, #f7).category {
   overflow: hidden;
   padding: 10px 0;
 }
@@ -38,7 +38,7 @@
   padding:15px;
 }
 
-#f3 .forums-guidebook {
+:is(#f3, #f2, #f10, #f12, #f7) .forums-guidebook {
   background:var(--neutralDark);
   padding:15px 15px 0 15px;
 }
@@ -52,6 +52,12 @@
 #f3 .forums {
   display:grid;
   grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+}
+
+:is(#f2, #f10, #f12, #f7) .forums {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
   gap:20px;
 }
 
@@ -87,8 +93,7 @@
   font-weight:300;
 }
 
-#c2 .cate_title, 
-#f3 .cate_title {
+:is(#c2, #f3, #f2, #f10, #f12, #f7) .cate_title {
   grid-column: span 2; 
 }
 
@@ -173,7 +178,7 @@
   border-radius: 5px;
 }
 
-#f3 .forum {
+:is(#f3, #f2, #f10, #f12, #f7) .forum {
   margin:0 0 5px 0;
   background:transparent;
   border-radius: 5px;
@@ -275,7 +280,7 @@
 
 /* titre d'un forum */
 
-:is(#c2, #f3) .forum-entete {
+:is(#c2, #f3, #f2, #f10, #f12, #f7) .forum-entete {
   background: var(--neutral);
   padding: 5px;
   border-radius: 10px;
@@ -302,7 +307,7 @@
   text-align: right;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
+:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
   margin: 10px;
 }
 
@@ -318,7 +323,10 @@
   color: var(--textColorAccent);
 }
 
-#f3 .forum:nth-child(-n+2) .forum-entete {
+#f3 .forum:nth-child(-n+2) .forum-entete,
+#f2 .forum:nth-child(3) .forum-entete,
+#f10 .forum:nth-child(-n+2) .forum-entete,
+#f12 .forum:nth-child(1) .forum-entete{
   background: var(--accent);
   color: var(--textColor);
 }
@@ -340,7 +348,10 @@
   background: linear-gradient(90deg, var(--contrastLight) 35%, var(--tertiaire) 100%);
 }
 
-#f3 .forum:nth-child(-n+2).forum_new .forum-entete {
+#f3 .forum:nth-child(-n+2).forum_new .forum-entete,
+#f2 .forum:nth-child(3).forum_new .forum-entete,
+#f10 .forum:nth-child(-n+2).forum_new .forum-entete,
+#f12 .forum:nth-child(1).forum_new .forum-entete {
   background: linear-gradient(90deg, var(--accent) 35%, var(--tertiaire) 100%);
 }
 
@@ -351,7 +362,7 @@
   color:var(--textColorAccent);
 }
 
-#f3 .forum.forum_new a.lastpost_link {
+:is(#f3, #f2, #f10, #f12, #f7) .forum.forum_new a.lastpost_link {
   background:var(--tertiaire);
   color:var(--textColorAccent);
 }
@@ -413,7 +424,7 @@ a.forumtitle:hover {
   z-index: 10;
 }
 
-:is(#c2, #f3) .forum_content {
+:is(#c2, #f3, #f2, #f10, #f12, #f7) .forum_content {
   position: unset;
   margin-top: 10px;
 }
@@ -484,8 +495,10 @@ a.forumtitle:hover {
   z-index: -3;
 }
 
-#c2 .forum:nth-child(n+3):nth-child(-n+5) .forum_desc,
-#f3 .forum_desc {
+:is(
+  #c2 .forum:nth-child(n+3):nth-child(-n+5),
+  #f3, #f2, #f10, #f12, #f7
+) .forum_desc {
   display: none;
 }
 
@@ -516,11 +529,11 @@ a.forumtitle:hover {
   font-size: var(--little-size);
 }
 
-:is(#c2, #f3) .forum_lastpost span {
+:is(#c2, #f3, #f2, #f10, #f12, #f7) .forum_lastpost span {
   height: 45px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
+:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
   display: block; 
   width: 100%; 
   height: 21px;
@@ -533,11 +546,11 @@ a.forumtitle:hover {
   border-radius: 2px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
+:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
   display: none;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
+:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
   color: var(--textColor);
 }
 
@@ -551,7 +564,7 @@ a.forumtitle:hover {
   justify-content: space-between;
 }
 
-:is(#f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_details {
+:is(#f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum_details {
   display: none;
 }
 
@@ -656,10 +669,6 @@ a.forumtitle:hover {
   display: block;
   width: 200px;
   box-sizing: border-box;
-}
-
-:is(#f3) #subforum {
-  display:none;
 }
 
 /*SUB TERRITOIRE*/
