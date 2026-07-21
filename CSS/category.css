@@ -21,6 +21,12 @@
   opacity:0.2;
 }
 
+#c4.category {
+  background:var(--neutralDark);
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr; 
+}
+
 :is(#c2, #f3, #f2, #f10, #f12, #f7).category {
   overflow: hidden;
   padding: 10px 0;
@@ -83,18 +89,49 @@
   display: block;
   text-align: center;
   text-transform: uppercase;
-  width:100%;
-  font-size: 18px;
-  font-weight: 700;
+  width: 100%;
   margin: 15px 0 20px;
-  color:#ededed;
-  font-family:var(--titlefont);
-  font-size:32px;
-  font-weight:300;
+  font-family: var(--titlefont);
+  font-size: 32px;
+  font-weight: 300;
+  color: #ededed;
 }
 
 :is(#c2, #f3, #f2, #f10, #f12, #f7) .cate_title {
   grid-column: span 2; 
+}
+
+#c4 .cate_title {
+  display: inline-block;
+  align-self: end;
+}
+
+#c4 .cate_title::before {
+content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1; 
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, var(--neutralDark) 100%),
+    url('https://www.aht.li/3980970/F9mwGntawAA6qLU.png') no-repeat 60px -75px / 350px,
+    radial-gradient(circle 200px at 220px 150px, var(--contrastLight) 99%, transparent 100%) no-repeat;
+}
+
+/* 5. Le h2 dans #c4 avec son dégradé de texte */
+#c4 .cate_title h2 {
+position: relative;
+  z-index: 2;
+  display: inline-block !important; 
+  width: fit-content !important; 
+  text-align: left;
+  padding: 0 0 0 115px;
+  margin:0;
+  font-size: 42px;
+  background: linear-gradient(90deg, var(--accentClr) 80%, var(--textColor) 20%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
 }
 
 /* GUIDEBOOK */
