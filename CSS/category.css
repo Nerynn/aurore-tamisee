@@ -28,7 +28,7 @@
   grid-template-columns: 1fr 1.5fr; 
 }
 
-:is(#c2, #f3, #f2, #f10, #f12, #f7).category {
+:is(#c2, #c3, #f3, #f2, #f10, #f12, #f7).category {
   overflow: hidden;
   padding: 10px 0;
 }
@@ -37,12 +37,17 @@
   
 }
 
-#c2 .forums-guidebook {
+:is(#c2, #c3, #c4) .forums-guidebook {
   display: grid; 
   grid-template-columns: 1fr auto; 
   gap: 20px;
   background:var(--neutralDark);
   padding:15px;
+}
+
+#c4 .forums-guidebook {
+  opacity:0.9;
+  border-radius:5px;
 }
 
 :is(#f3, #f2, #f10, #f12, #f7) .forums-guidebook {
@@ -60,6 +65,7 @@
   display:flex;
   flex-direction: column;
   margin:5px;
+  gap:20px;
 }
 
 #f3 .forums {
@@ -206,6 +212,71 @@ position: relative;
   background:var(--accentClr);
 }
 
+/*GUIDESTAFF*/
+
+.guidestaff {
+  display:none;
+}
+
+#c3 .guidestaff {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, var(--neutral), rgba(0, 0, 0, 0.3)), var(--img-guidebook), linear-gradient(to bottom, var(--tertiaire), rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+  width:450px;
+  position:relative;
+}
+
+#c3 .guidestaff a:hover {
+  color:var(--textColor);
+}
+
+#c3 .guidestaff h2 {
+  font-family:var(--titlefont);
+  text-transform:uppercase;
+  font-size:70px;
+  font-weight:300;
+  text-shadow: 0px 0px 20px var(--neutral);
+  margin: 20px 0 0 0;
+}
+
+#c3 .guidestaff span {
+  padding: 20px 0 20px;
+}
+
+#c3 .guidestaff h2 span {
+  padding:0;
+  color:var(--tertiaire);
+}
+
+#c3 #guidestaff_links {
+  width:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap:10px;
+  position:absolute;
+  left:15px;
+  bottom:15px;
+}
+
+#c3 #guidestaff_links a {
+  background:var(--tertiaire);
+  padding:5px;
+  border-radius:5px;
+  color:var(--textColorAccent);
+}
+
+#c3 #guidestaff_links a:hover {
+  background:var(--accentClr);
+}
+
 /* conteneur d'un forum*/
 .forum {
   background: var(--neutral);
@@ -216,8 +287,14 @@ position: relative;
   margin-bottom: 0;
 }
 
-:is(#c2, #c4, #f3, #f2, #f10, #f12, #f7) .forum {
+:is(#c2, #c3, #f3, #f2, #f10, #f12, #f7) .forum {
   margin:0 0 10px 0;
+  background:transparent;
+  border-radius: 5px;
+}
+
+#c4 .forum {
+  margin:0;
   background:transparent;
   border-radius: 5px;
 }
@@ -318,7 +395,7 @@ position: relative;
 
 /* titre d'un forum */
 
-:is(#c2, #c4, #f3, #f2, #f10, #f12, #f7) .forum-entete {
+:is(#c2, #c3, #c4, #f3, #f2, #f10, #f12, #f7) .forum-entete {
   background: var(--neutral);
   padding: 5px;
   border-radius: 10px;
@@ -345,7 +422,7 @@ position: relative;
   text-align: right;
 }
 
-:is(#c1, #c2, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
+:is(#c1, #c2, #c3, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) .forum-entete span:empty {
   margin: 10px;
 }
 
@@ -373,7 +450,7 @@ position: relative;
 /**nouveaux messages**/
 /*nouveaux messages entete*/
 
-:is(#c2 .forum.cat_new, #c4 .forum.cat_new, #f3 .forum.forum_new) .forum-entete {
+:is(#c2 .forum.cat_new, #c3 .forum.cat_new, #c4 .forum.cat_new, #f3 .forum.forum_new) .forum-entete {
   background: linear-gradient(90deg, var(--neutral) 35%, var(--tertiaire) 100%);
 }
 
@@ -463,7 +540,7 @@ a.forumtitle:hover {
   z-index: 10;
 }
 
-:is(#c2, #c4, #f3, #f2, #f10, #f12, #f7) .forum_content {
+:is(#c2, #c3, #c4, #f3, #f2, #f10, #f12, #f7) .forum_content {
   position: unset;
   margin-top: 10px;
 }
@@ -535,7 +612,7 @@ a.forumtitle:hover {
 }
 
 :is(
-  #c2 .forum:nth-child(n+3):nth-child(-n+5), #c4,
+  #c2 .forum:nth-child(n+3):nth-child(-n+5), #c3, #c4,
   #f3, #f2, #f10, #f12, #f7
 ) .forum_desc {
   display: none;
@@ -568,11 +645,11 @@ a.forumtitle:hover {
   font-size: var(--little-size);
 }
 
-:is(#c2, #f3, #f2, #f10, #f12, #f7) .forum_lastpost span {
+:is(#c2, #c3, #c4, #f3, #f2, #f10, #f12, #f7) .forum_lastpost span {
   height: 45px;
 }
 
-:is(#c1, #c2, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
+:is(#c1, #c2, #c3, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link {
   display: block; 
   width: 100%; 
   height: 21px;
@@ -585,11 +662,11 @@ a.forumtitle:hover {
   border-radius: 2px;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
+:is(#c1, #c2, #c3, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:empty {
   display: none;
 }
 
-:is(#c1, #c2, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
+:is(#c1, #c2, #c3, #c4, #c5, #c6, #f3, #f2, #f10, #f12, #f7, #f26, #f27, #f28, #f29, #f30, #f31, #f48, #f49, #f50, #f51, #f52, #f53, #f104) a.lastpost_link:hover {
   color: var(--textColor);
 }
 
@@ -660,6 +737,10 @@ a.forumtitle:hover {
   overflow: auto;
   scrollbar-color: var(--secondaire) transparent;
   scrollbar-width: thin;
+}
+
+#c4 #subforum {
+  height:21px;
 }
 
 #subforum a {
