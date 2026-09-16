@@ -506,6 +506,10 @@ a.forumtitle:hover {
   color:var(--tertiaire);
 }
 
+#c1 a.forumtitle:hover {
+  color:var(--secondaire);
+}
+
 #c2 .forum:nth-child(3) a.forumtitle, 
 #c2 .forum:nth-child(5) a.forumtitle,
 #c2 .forum:nth-child(4) a.forumtitle,
