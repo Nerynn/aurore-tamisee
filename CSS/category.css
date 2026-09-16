@@ -506,7 +506,7 @@ a.forumtitle:hover {
   color:var(--tertiaire);
 }
 
-#c1 a.forumtitle:hover {
+#c1 a.forumtitle:hover, #c6 a.forumtitle:hover {
   color:var(--secondaire);
 }
 
