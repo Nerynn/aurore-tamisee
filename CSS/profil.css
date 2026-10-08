@@ -625,6 +625,18 @@
   color: #fff;
 }
 
+.profile_reward .award .award_tooltiptext {
+    display: none;
+}
+
+.profile_reward .award:hover {
+    z-index: 10;
+}
+
+.profile_reward .award:hover .award_tooltiptext {
+    display: block;
+}
+
 .profile_admin {
   text-align: center;
   margin: 10px 0 0;
