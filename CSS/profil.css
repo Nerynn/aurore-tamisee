@@ -330,11 +330,12 @@
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border:solid 15px var(--backColor);
+    border: solid 15px var(--backColor);
     box-sizing: content-box;
 }
 
-.profile_user_icon .ajax-profil_edit {
+.profile_user_icon #field_id10 .ajax-profil_edit {
+    position: absolute;
     top: 4px;
     right: 4px;
     left: auto;
@@ -342,13 +343,16 @@
     line-height: 0;
 }
 
-.profile_user_icon .ajax-profil_edit img {
+.profile_user_icon #field_id10 .ajax-profil_edit img {
+    position: static;
     display: block;
     width: 16px;
     height: 16px;
     padding: 3px;
     box-sizing: content-box;
+    border: 0;
     border-radius: 50%;
+    object-fit: contain;
     background: var(--neutral);
     cursor: pointer;
 }
