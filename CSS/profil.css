@@ -504,7 +504,10 @@
     background-origin: content-box, padding-box;
     background-clip: content-box, padding-box;
     cursor: pointer;
+    z-index: 1;
 }
+
+.profile_reward .award:hover { z-index: 10; }
 
 .profile_reward .award_tooltiptext {
     top: calc(100% + 12px);
@@ -623,18 +626,6 @@
   font-size: 22px;
   line-height: 1;
   color: #fff;
-}
-
-.profile_reward .award .award_tooltiptext {
-    display: none;
-}
-
-.profile_reward .award:hover {
-    z-index: 10;
-}
-
-.profile_reward .award:hover .award_tooltiptext {
-    display: block;
 }
 
 .profile_admin {
