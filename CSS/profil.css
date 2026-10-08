@@ -628,6 +628,14 @@
   color: #fff;
 }
 
+.profile_reward .award .award_tooltiptext {
+    display: none !important;
+}
+
+.profile_reward .award:hover .award_tooltiptext {
+    display: block !important;
+}
+
 .profile_admin {
   text-align: center;
   margin: 10px 0 0;
