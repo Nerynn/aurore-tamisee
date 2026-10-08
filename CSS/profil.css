@@ -284,6 +284,34 @@
     background: var(--user-color-contrast);
 }
 
+.profile_contact #field_id11,
+.profile_contact #field_id12,
+.profile_contact .ajax-profil_parent {
+    position: relative;
+}
+
+.profile_contact .ajax-profil_edit {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    left: auto;
+    z-index: 3;
+    line-height: 0;
+}
+
+.profile_contact .ajax-profil_edit img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    box-sizing: content-box;
+    border: 0;
+    border-radius: 50%;
+    object-fit: contain;
+    background: var(--neutral);
+    cursor: pointer;
+}
+
 .profile_stats {
     display: flex;
     flex-direction: column;
@@ -354,6 +382,21 @@
     border-radius: 50%;
     object-fit: contain;
     background: var(--neutral);
+    cursor: pointer;
+}
+
+.profile_user_icon #field_id10 .ajax-profil_valid {
+    position: static;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    box-sizing: content-box;
+    border: 0;
+    border-radius: 50%;
+    object-fit: contain;
+    background: var(--neutral);
+    vertical-align: middle;
     cursor: pointer;
 }
 
