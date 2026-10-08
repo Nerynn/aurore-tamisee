@@ -306,9 +306,7 @@
     padding: 3px;
     box-sizing: content-box;
     border: 0;
-    border-radius: 50%;
     object-fit: contain;
-    background: var(--neutral);
     cursor: pointer;
 }
 
@@ -379,9 +377,7 @@
     padding: 3px;
     box-sizing: content-box;
     border: 0;
-    border-radius: 50%;
     object-fit: contain;
-    background: var(--neutral);
     cursor: pointer;
 }
 
